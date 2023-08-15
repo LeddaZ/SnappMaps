@@ -4,7 +4,9 @@ import android.app.Activity
 import android.location.Location
 import android.net.ConnectivityManager
 import android.net.Network
+import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 
 import androidx.preference.PreferenceManager
@@ -79,6 +81,7 @@ class MainActivity : Activity(), ActivityCompat.OnRequestPermissionsResultCallba
         locationTracker.startTracking()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     public override fun onResume() {
         super.onResume()
         Configuration.getInstance().load(applicationContext,
