@@ -1,0 +1,36 @@
+//
+// SPDX-FileCopyrightText: 2022-2023 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_app {
+    name: "SnappMaps",
+
+    defaults: ["aapt_version_code_defaults"],
+
+    srcs: ["src/main/java/**/*.kt"],
+    resource_dirs: ["src/main/res"],
+    manifest: "src/main/AndroidManifest.xml",
+
+    sdk_version: "current",
+    product_specific: true,
+    overrides: ["CarMapsPlaceholder"],
+
+    static_libs: [
+        // DO NOT EDIT THIS SECTION MANUALLY
+        "androidx.appcompat_appcompat",
+        "androidx.core_core-ktx",
+        "androidx.preference_preference-ktx",
+        "SnappMaps_com.google.android.material_material",
+        "SnappMaps_org.osmdroid_osmdroid-android",
+        "androidx.databinding_viewbinding",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard-rules.pro"],
+    },
+}
