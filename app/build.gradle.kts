@@ -8,10 +8,8 @@ plugins {
 }
 
 android {
-    namespace = "it.leddaz.revancedupdater"
-    compileSdk = 33
-
     namespace = "com.snappautomotive.maps"
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.snappautomotive.maps"
