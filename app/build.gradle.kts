@@ -118,9 +118,8 @@ tasks.register("generateBp") {
     val isAvailableInAosp = { group: String, artifactId: String ->
         when {
             group.startsWith("androidx") -> {
-                // We provide our own androidx.{camera,media3} & lifecycle-common
-                !group.startsWith("androidx.camera") &&
-                        !group.startsWith("androidx.media3") &&
+                !group.startsWith("androidx.preference") &&
+                        !group.startsWith("androidx.databinding") &&
                         artifactId != "lifecycle-common"
             }
             group.startsWith("org.jetbrains") -> true

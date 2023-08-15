@@ -24,10 +24,10 @@ android_app {
         // DO NOT EDIT THIS SECTION MANUALLY
         "androidx.appcompat_appcompat",
         "androidx.core_core-ktx",
-        "androidx.preference_preference-ktx",
+        "SnappMaps_androidx.preference_preference-ktx",
         "SnappMaps_com.google.android.material_material",
         "SnappMaps_org.osmdroid_osmdroid-android",
-        "androidx.databinding_viewbinding",
+        "SnappMaps_androidx.databinding_viewbinding",
     ],
 
     optimize: {
